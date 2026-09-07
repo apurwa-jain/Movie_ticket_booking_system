@@ -70,5 +70,5 @@ folder:
 
 - [MBS report](docs/MBS_report.pdf)
 - [MBS output](docs/MBS_output.pdf)
-- [Class diagram](docs/class%20diagram.jpeg)
+- [Class diagram](docs/class_diagram.jpeg)
 - [Sequence diagram](docs/sequence_diagram.png)
