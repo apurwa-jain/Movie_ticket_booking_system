@@ -1,0 +1,15 @@
+# C++ build outputs
+*.exe
+*.obj
+*.o
+*.out
+
+# IDE and operating-system files
+.vs/
+.vscode/
+*.user
+*.suo
+*.pdb
+*.ilk
+*.ds_store
+Thumbs.db
