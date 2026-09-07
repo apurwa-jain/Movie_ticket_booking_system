@@ -1,24 +1,74 @@
 # Movie Ticket Booking System
 
-This project is a C++ movie ticket booking system.
+A modular, console-based movie ticket booking system developed in C++.
 
-## Source code
+## Features
 
-Open the **All codes** folder on GitHub, then select any `.cpp` file:
+- Display movies, languages, durations, and show timings
+- Display cinema screens and seat layouts
+- Book available seats for a selected show
+- Support Silver, Gold, and Platinum seat categories
+- Calculate booking prices based on seat category
+- Support UPI, card, and cash payment options
+- Print a booking ticket after successful payment
+- Cancel bookings and release booked seats
+- View booking details and handle invalid input safely
 
-- [main.cpp](All%20codes/main.cpp)
-- [01_Movie.cpp](All%20codes/01_Movie.cpp)
-- [02_Seat.cpp](All%20codes/02_Seat.cpp)
-- [03_Screen.cpp](All%20codes/03_Screen.cpp)
-- [04_Cinema.cpp](All%20codes/04_Cinema.cpp)
-- [05_Show.cpp](All%20codes/05_Show.cpp)
-- [06_ShowSeat.cpp](All%20codes/06_ShowSeat.cpp)
-- [07_Customer.cpp](All%20codes/07_Customer.cpp)
-- [08_Booking.cpp](All%20codes/08_Booking.cpp)
-- [09_Payment.cpp](All%20codes/09_Payment.cpp)
-- [10_PaymentTypes.cpp](All%20codes/10_PaymentTypes.cpp)
-- [11_PriceCalculator.cpp](All%20codes/11_PriceCalculator.cpp)
-- [12_TicketPrinter.cpp](All%20codes/12_TicketPrinter.cpp)
-- [13_BookingService.cpp](All%20codes/13_BookingService.cpp)
+## How to Compile and Run
 
-To download the complete project, select **Code** and then **Download ZIP**.
+The project uses one `.cpp` file per class and includes the implementation
+files through `main.cpp`. Compile `main.cpp` only:
+
+```bash
+g++ -std=c++17 main.cpp -o movie_booking
+./movie_booking
+```
+
+On Windows:
+
+```bash
+g++ -std=c++17 main.cpp -o movie_booking.exe
+movie_booking.exe
+```
+
+The executable is not committed to GitHub because it is a generated build
+file. Build it locally from the source code.
+
+## Project Structure
+
+| File | Responsibility |
+|---|---|
+| `01_Movie.cpp` | Movie information |
+| `02_Seat.cpp` | Seat details and category |
+| `03_Screen.cpp` | Screen and seats |
+| `04_Cinema.cpp` | Cinema and screens |
+| `05_Show.cpp` | Movie show and timing |
+| `06_ShowSeat.cpp` | Seat status for a show |
+| `07_Customer.cpp` | Customer information |
+| `08_Booking.cpp` | Booking details |
+| `09_Payment.cpp` | Payment abstraction |
+| `10_PaymentTypes.cpp` | Payment method implementations |
+| `11_PriceCalculator.cpp` | Price calculation |
+| `12_TicketPrinter.cpp` | Ticket output |
+| `13_BookingService.cpp` | Booking workflow |
+| `main.cpp` | Program entry point |
+
+## OOP Concepts Demonstrated
+
+- **Encapsulation:** Classes protect their data through private members and
+  public methods.
+- **Abstraction:** Payment behavior is defined through a common interface.
+- **Inheritance:** Different payment types share the payment abstraction.
+- **Polymorphism:** The selected payment method is resolved at runtime.
+- **Composition:** A cinema contains screens, and screens contain seats.
+- **Association:** Shows use movie and screen objects to represent bookings.
+
+## Documentation
+
+Project reports and design diagrams are available in the [`docs`](docs)
+folder:
+
+- [MBS report](docs/MBS_report.pdf)
+- [MBS output](docs/MBS_output.pdf)
+- [Class diagram](docs/class%20diagram.jpeg)
+- [Sequence diagram](docs/sequence_diagram.png)
